@@ -11,6 +11,7 @@ onlineShop\model\User.class
 onlineShop\model\Authorities.class
 onlineShop\model\CartItem.class
 onlineShop\model\SalesOrder.class
+onlineShop\SecurityConfig.class
 onlineShop\controller\HomePageController.class
 onlineShop\model\Cart.class
 onlineShop\model\Customer.class

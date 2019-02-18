@@ -10,6 +10,7 @@ D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\model\Product.java
 D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\ApplicationConfig.java
 D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\service\CustomerService.java
 D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\model\BillingAddress.java
+D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\SecurityConfig.java
 D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\model\Customer.java
 D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\controller\HomePageController.java
 D:\LaiofferProjects\onlineShop\src\main\java\onlineShop\dao\CustomerDaoImpl.java

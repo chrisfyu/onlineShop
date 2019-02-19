@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/mvc
@@ -12,7 +14,8 @@
 
 	<mvc:annotation-driven></mvc:annotation-driven>
 
-	<context:component-scan base-package="onlineShop"></context:component-scan>
+	<context:component-scan
+		base-package="onlineShop"></context:component-scan>
 
 	<!-- Using this it get the actual view name by converting logical view name -->
 	<!-- for eg: logical view name is welcome -->
@@ -27,5 +30,6 @@
 	<!-- mvc:resources is to find the resource file like bootstrap,css,JQuery 
 		and Images in resource folder -->
 
-	<mvc:resources mapping="/resource/**" location="/WEB-INF/resource/" />
+	<mvc:resources mapping="/resource/**"
+		location="/WEB-INF/resource/" />
 </beans>

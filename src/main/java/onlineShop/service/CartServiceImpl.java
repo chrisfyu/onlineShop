@@ -9,11 +9,11 @@ import onlineShop.model.Cart;
 @Service
 public class CartServiceImpl implements CartService {
 
-    @Autowired
-    private CartDao cartDao;
+	@Autowired
+	private CartDao cartDao;
 
-    @Override
-    public Cart getCartById(int CartId) {
-   	 return cartDao.getCartById(CartId);
-    }
+	@Override
+	public Cart getCartById(int CartId) {
+		return cartDao.getCartById(CartId);
+	}
 }

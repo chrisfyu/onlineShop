@@ -17,24 +17,24 @@ import onlineShop.service.CustomerService;
 
 @Controller
 public class CartController {
-    @Autowired
-    private CustomerService customerService;
-    
-    @Autowired
-    private CartService cartService;
-    
-    @RequestMapping(value = "/cart/getCartById", method = RequestMethod.GET)
-    public ModelAndView getCartId(){
-   	 Authentication loggedInUser = SecurityContextHolder.getContext().getAuthentication();
-   	 String username = loggedInUser.getName();
-   	 Customer customer = customerService.getCustomerByUserName(username);
-   	 ModelAndView modelAndView = new ModelAndView("cart");
-   	 modelAndView.addObject("cartId", customer.getCart().getId());
-   	 return modelAndView;
-    }
-    
-    @RequestMapping("/cart/getCart/{cartId}")
-    public @ResponseBody Cart getCartItems(@PathVariable(value="cartId")int cartId){
-   	 return cartService.getCartById(cartId);
-    }
+	@Autowired
+	private CustomerService customerService;
+
+	@Autowired
+	private CartService cartService;
+
+	@RequestMapping(value = "/cart/getCartById", method = RequestMethod.GET)
+	public ModelAndView getCartId() {
+		Authentication loggedInUser = SecurityContextHolder.getContext().getAuthentication();
+		String username = loggedInUser.getName();
+		Customer customer = customerService.getCustomerByUserName(username);
+		ModelAndView modelAndView = new ModelAndView("cart");
+		modelAndView.addObject("cartId", customer.getCart().getId());
+		return modelAndView;
+	}
+
+	@RequestMapping("/cart/getCart/{cartId}")
+	public @ResponseBody Cart getCartItems(@PathVariable(value = "cartId") int cartId) {
+		return cartService.getCartById(cartId);
+	}
 }

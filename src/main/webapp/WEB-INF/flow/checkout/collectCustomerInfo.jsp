@@ -10,13 +10,16 @@
 	href="<c:url value="/resource/bootstrap/css/bootstrap.min.css"/>">
 <script src="<c:url value="/resource/js/jquery.js"/>"></script>
 <script src="<c:url value="/resource/bootstrap/js/bootstrap.min.js"/>"></script>
-<link rel="stylesheet" type="text/css"	href="<c:url value="/resource/css/register.css"/>">
+<link rel="stylesheet" type="text/css"
+	href="<c:url value="/resource/css/register.css"/>">
 
 </head>
 <body style="padding: 0px;">
 
 	<div class="container" style="margin-bottom: 19px">
-		<center><h1 class="well">Customer Details</h1></center>
+		<center>
+			<h1 class="well">Customer Details</h1>
+		</center>
 		<div class="col-lg-12 well">
 			<div class="row">
 
@@ -81,7 +84,8 @@
 
 						<div class="form-actions">
 							<button type="Submit" class="btn btn-lg btn-info"
-								name="_eventId_customerInfoCollected" style="margin-right: 44px; margin-left: 0px">Next</button>
+								name="_eventId_customerInfoCollected"
+								style="margin-right: 44px; margin-left: 0px">Next</button>
 							<button class="btn btn-lg btn-default" name="_eventId_cancel">Cancel</button>
 						</div>
 

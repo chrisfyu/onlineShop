@@ -11,12 +11,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Product Management</title>
-<link rel="icon" type="image/x-icon" href="<c:url value="/resource/images/favicon.png"/>" />
-<link rel="stylesheet" href="<c:url value="/resource/bootstrap/css/bootstrap.min.css"/>">
+<link rel="icon" type="image/x-icon"
+	href="<c:url value="/resource/images/favicon.png"/>" />
+<link rel="stylesheet"
+	href="<c:url value="/resource/bootstrap/css/bootstrap.min.css"/>">
 <script src="<c:url value="/resource/js/jquery.js"/>"></script>
 <script src="<c:url value="/resource/bootstrap/js/bootstrap.min.js"/>"></script>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resource/css/ProductList.css"/>">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="<c:url value="/resource/css/ProductList.css"/>">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="<c:url value="/resource/js/productController.js"/>"></script>
 </head>
 <body ng-app="myapp">
@@ -35,12 +39,10 @@
 					<th>Stock Unit</th>
 					<th>Description</th>
 					<th>Manufacturer</th>
-					<th>View
-					<security:authorize access="hasRole('ROLE_USER')" >
+					<th>View <security:authorize access="hasRole('ROLE_USER')">
 						/Add to Cart
-					</security:authorize> 
-					<!-- views only to the admin --> 
-					<security:authorize access="hasRole('ROLE_ADMIN')">
+					</security:authorize> <!-- views only to the admin --> <security:authorize
+							access="hasRole('ROLE_ADMIN')">
 						/Edit/Delete
 					</security:authorize>
 					</th>
@@ -49,9 +51,8 @@
 			<tbody>
 				<c:forEach items="${products}" var="prod">
 					<tr>
-						<td style="width: 171px"><img
-							src="/products/${prod.id}.jpg"
-							style="width: 100px; height: 90px;"/></td>
+						<td style="width: 171px"><img src="/products/${prod.id}.jpg"
+							style="width: 100px; height: 90px;" /></td>
 						<td>${prod.id}</td>
 						<td>${prod.productCategory}</td>
 						<td>${prod.productName}</td>
@@ -59,29 +60,24 @@
 						<td>${prod.unitStock}</td>
 						<td style="width: 180px">${prod.productDescription}</td>
 						<td>${prod.productManufacturer}</td>
-						<td ng-controller="myController">
-							<a href="getProductById/${prod.id}" class="btn btn-info"
-								role="button"> <span class="glyphicon glyphicon-info-sign"></span>
-							</a>
-
-							<!-- view only for user --> 
-							<security:authorize access="hasRole('ROLE_USER')">
+						<td ng-controller="myController"><a
+							href="getProductById/${prod.id}" class="btn btn-info"
+							role="button"> <span class="glyphicon glyphicon-info-sign"></span>
+						</a> <!-- view only for user --> <security:authorize
+								access="hasRole('ROLE_USER')">
 								<a href="#" ng-click="addToCart(${prod.id})"
 									class="btn btn-primary" style="margin-left: 5px"> <span
 									class="glyphicon glyphicon-shopping-cart"></span>
 								</a>
-							</security:authorize> 
-							
-							<!-- view only to the admin --> 
-							<security:authorize access="hasRole('ROLE_ADMIN')">
+							</security:authorize> <!-- view only to the admin --> <security:authorize
+								access="hasRole('ROLE_ADMIN')">
 								<a href="admin/product/editProduct/${prod.id}"
 									class="btn btn-success" style="margin-left: 5px"> <span
 									class="glyphicon glyphicon-edit"></span></a>
 								<a href="admin/delete/${prod.id}" class="btn btn-danger"
 									style="margin-left: 5px"> <span
 									class="glyphicon glyphicon-trash"></span></a>
-							</security:authorize>
-						</td>
+							</security:authorize></td>
 					</tr>
 				</c:forEach>
 			</tbody>

@@ -11,8 +11,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Products</title>
-<link rel="icon" type="image/x-icon" href="<c:url value="/resource/images/favicon.png"/>" />
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="icon" type="image/x-icon"
+	href="<c:url value="/resource/images/favicon.png"/>" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="<c:url value="/resource/js/productController.js"/>"></script>
 </head>
 <body>
@@ -24,8 +26,8 @@
 				<tbody>
 					<tr>
 						<td>Prodcut Image</td>
-						<td><img src="/products/${product.id}.jpg"
-							width="40%" alt="${product.productName}" /></td>
+						<td><img src="/products/${product.id}.jpg" width="40%"
+							alt="${product.productName}" /></td>
 					</tr>
 					<tr>
 						<td>Prodcut ID</td>
@@ -57,8 +59,7 @@
 					</tr>
 					<tr>
 						<td>Add to Cart:</td>
-						<td><c:url value="/cart/add/${product.id}"
-								var="addcart"></c:url>
+						<td><c:url value="/cart/add/${product.id}" var="addcart"></c:url>
 							<div ng-controller="myController">
 								<security:authorize access="hasRole('ROLE_USER')">
 									<a href="#" ng-click="addToCart(${product.id})"

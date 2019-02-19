@@ -10,11 +10,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Edit Product</title>
-<link rel="icon" type="image/x-icon" href="<c:url value="/resource/images/favicon.png"/>" />
-<link rel="stylesheet" href="<c:url value="/resource/bootstrap/css/bootstrap.min.css"/>">
+<link rel="icon" type="image/x-icon"
+	href="<c:url value="/resource/images/favicon.png"/>" />
+<link rel="stylesheet"
+	href="<c:url value="/resource/bootstrap/css/bootstrap.min.css"/>">
 <script src="<c:url value="/resource/js/jquery.js"/>"></script>
 <script src="<c:url value="/resource/bootstrap/js/bootstrap.min.js"/>"></script>
-<link rel="stylesheet" type="text/css" href="<c:url value="/resource/css/register.css"/>">
+<link rel="stylesheet" type="text/css"
+	href="<c:url value="/resource/css/register.css"/>">
 </head>
 <body>
 	<%@ include file="navbar.jsp"%>
@@ -24,13 +27,13 @@
 			<div class="row">
 				<c:url value="/admin/product/editProduct/${productId}" var="url"></c:url>
 				<form:form method="post" action="${url}"
-						   modelAttribute="editProductObj">
+					modelAttribute="editProductObj">
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-6 form-group">
 								<form:label path="id">Product Id</form:label>
 								<form:input type="text" placeholder="Enter ProductId"
-									class="form-control" path="id" disabled = "true"></form:input>
+									class="form-control" path="id" disabled="true"></form:input>
 							</div>
 							<div class="col-sm-6 form-group">
 								<form:label path="productName">Product Name</form:label>
@@ -53,9 +56,8 @@
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<form:label path="productManufacturer">Product Manufacturer</form:label>
-								<form:input type="text"
-									placeholder="Enter Product Manufacurer" class="form-control"
-									path="productManufacturer"></form:input>
+								<form:input type="text" placeholder="Enter Product Manufacurer"
+									class="form-control" path="productManufacturer"></form:input>
 							</div>
 							<div class="col-sm-4 form-group">
 								<form:label path="productPrice">Product Price</form:label>

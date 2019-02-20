@@ -9,4 +9,11 @@ import onlineShop.model.SalesOrder;
 @Service
 public class SalesOrderServiceImpl implements SalesOrderService {
 
+	@Autowired
+	private SalesOrderDao salesOrderDao;
+
+	@Override
+	public void addSalesOrder(SalesOrder salesOrder) {
+		salesOrderDao.addSalesOrder(salesOrder);
+	}
 }
